@@ -1,3 +1,17 @@
+// Checks that an int array has been sorted.
+
+#include <stdlib.h>
+
+int int_chk(int *a, const size_t len)
+{
+	for (int i = 0; i < len - 1; i++) {
+		if (a[i] > a[i + 1]) {
+			return -1;
+		}
+	}
+	return 0;
+}
+
 void int_swap(int *a, const int i, const int j)
 {
 	int tmp = a[i];
